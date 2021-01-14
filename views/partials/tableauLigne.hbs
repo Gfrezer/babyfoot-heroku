@@ -1,0 +1,59 @@
+<tr class="ligne" data-id="{{id}}">
+
+    {{#unless partie_termine }}
+    <td class="j1 ">{{joueur1}} </td>
+    <td>
+        <input class="inputJ1 inputCssScore" name="score1">{{score1}}
+    </td>
+    <td class="vs"> vs</td>
+    <td>
+        <input class="inputJ2 inputCssScore" name="score2">{{score2}}
+    </td>
+    <td class="j2">{{joueur2}}</td>
+    {{/unless}}
+
+
+
+
+
+
+    {{#if partie_termine}}
+    {{#if (estPlusGrand score1 score2)}}
+    <td class="j1 vert">{{joueur1}} </td>
+    <td>{{score1}}</td>
+    <td class="vs gray"> vs</td>
+    <td>{{score2}}</td>
+    <td class="j2 gray">{{joueur2}}</td>
+
+
+    {{else}}
+    <td class="j1 gray">{{joueur1}} </td>
+    <td>{{score1}}</td>
+    <td class="vs gray"> vs</td>
+    <td>{{score2}}</td>
+    <td class="j2 vert">{{joueur2}}</td>
+
+
+    {{/if}}
+    {{/if}}
+
+
+
+
+
+    <td><button type="submit" data-id="{{id}}" id="btn-{{id}}" class="btn-terminer">
+            {{#if partie_termine}}
+            <span class="termine">Terminée</span>
+            {{else}}
+            <span class="spanEnCour">Partie en cours</span>
+            {{/if}}
+            <span class="noValidScore hidden"> Veillez rentrer des scores valides</span>
+        </button>
+
+    </td>
+
+    <td><img src="/images/icons8-effacer-48.png" value="{{id}}" class="elt-supprimer" id="submit-{{id}}">
+
+    </td>
+
+</tr>
