@@ -14,10 +14,10 @@ const PARTIE_CREE = "partieclientCrée"
 
 //ROUTE READ A L'APPEL DU SERVEUR
 app.get("/", partieCrud.read);
-const PORT = process.env.PORT || 3020;
+const port = process.env.PORT || 3020;
 //WEBSOCKET
 const wss = new WebSocket.Server({
-    server: app.listen(PORT)
+    server: app.listen(port)
 });
 wss.on('connection', (ws) => {
     console.log('Client connected');
@@ -39,7 +39,7 @@ wss.on('connection', (ws) => {
         }
     })
 });
-console.log("L'application est disponible à l'adresse: http:// localhost:" + PORT)
+console.log("L'application est disponible à l'adresse: http:// localhost:" + port)
 //helper handlebars pour valider la condition score plus grand
 hbs.registerHelper('estPlusGrand', function (score1, score2) {
     return score1 > score2;
