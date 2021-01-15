@@ -12,7 +12,7 @@ const PARTIE_CREE = "partieclientCrée"
 
 //ROUTE READ A L'APPEL DU SERVEUR
 app.get("/", partieCrud.read);
-const port = 4500
+const port = 3000
 //WEBSOCKET
 const wss = new WebSocket.Server({
     server: app.listen(port)
