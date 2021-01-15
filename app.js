@@ -10,6 +10,12 @@ const PARTIE_SUPPRIMEE = "partieclientSupprime"
 const PARTIE_CREE = "partieclientCrée"
 
 
+
+app.get('/favicon.ico', function (req, res) {
+    res.status(204);
+    res.end();
+});
+
 //ROUTE READ A L'APPEL DU SERVEUR
 app.get("/", partieCrud.read);
 const port = process.env.PORT || 3020;
