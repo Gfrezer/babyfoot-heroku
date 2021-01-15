@@ -9,9 +9,6 @@ const PARTIE_TERMINEE = "partieClientTermine"
 const PARTIE_SUPPRIMEE = "partieclientSupprime"
 const PARTIE_CREE = "partieclientCrée"
 
-app.get('/favicon.ico', function (req, res) {
-    res.status(204);
-});
 
 
 
