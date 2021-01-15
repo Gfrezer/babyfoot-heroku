@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "Application pour gérer des parties de baby-foot",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
-  },
+ 
   "author": "Gael",
   "license": "ISC",
   "dependencies": {
